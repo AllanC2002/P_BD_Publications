@@ -1,17 +1,17 @@
 db.createCollection("Publications");
 
 db.Publications.insertOne({
-  Id_User: 12,
+  Id_user: 0,
   Text: "Primera publicación de ejemplo.",
   Multimedia: [
     {
       name: "Photo1",
-      url: "https://miservidor.com/foto1.png",
+      url: "https://miserver.com/foto1.png",
       type: "image/png"
     },
     {
       name: "Video1",
-      url: "https://miservidor.com/video1.mp4",
+      url: "https://miserver.com/video1.mp4",
       type: "video/mp4"
     }
   ],
@@ -27,6 +27,7 @@ db.Comments.insertOne({
   Id_publication: ObjectId("000000000000000000000000"),
   Id_user: 0,
   Comment: "Example comment",
+  Status: 1,
   Date_comment: new Date(),
-  Likes: []
+  Likes: [12, 15, 20]
 });
