@@ -19,3 +19,14 @@ db.Publications.insertOne({
   Datepublish: new Date(),
   Likes: [12, 15, 20]
 });
+
+
+db.createCollection("Comments");
+
+db.Comments.insertOne({
+  Id_publication: ObjectId("000000000000000000000000"),
+  Id_user: 0,
+  Comment: "Example comment",
+  Date_comment: new Date(),
+  Likes: []
+});
